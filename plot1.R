@@ -1,6 +1,11 @@
-setwd("C:/Users/ctil9/OneDrive/Documents/R/Exploratory Data Analysis/week 1/ExData_Plotting1")
+dir.create("./ExData_Plotting1")
+data <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 
-household_power_consumption <- read.table('household_power_consumption.txt',
+download.file(data, destfile = "./ExData_Plotting1.zip")
+unzip("./ExData_Plotting1.zip", exdir = "./ExData_Plotting1")
+
+
+household_power_consumption <- read.table('./ExData_Plotting1/household_power_consumption.txt',
                                           header = TRUE,
                                           sep = ";")
 
